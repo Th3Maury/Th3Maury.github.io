@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard-bg {
+    /* min-height: 100vh; */ /* Elimina o comenta esta línea */
+    width: 100vw;
+    background: white;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboard-container {
+    background: rgba(255,255,255,0.97);
+    max-width: 1400px;
+    margin: 40px auto 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    padding: 32px 24px 24px 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 90vh; */ /* Elimina o comenta esta línea */
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #FF4B4B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-game {
+    text-align: center;
+}
+
+/* Ajusta el margen superior solo cuando hay 2 columnas (pantallas medianas) */
+@media (min-width: 600px) and (max-width: 1100px) {
+    .add-game {
+        margin-top: 80px; /* Más espacio arriba para evitar superposición */
+    }
+}
+
+.add-game-btn {
+    background-color: #00C8F8;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.game-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 32px 20px 20px 20px; /* más espacio arriba */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botones pequeños y bien posicionados */
+.edit-btn, .delete-btn {
+    position: absolute;
+    top: -14px;
+    width: 120px;
+    height: 28px;
+    padding: 0;
+    font-size: 13px;
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn {
+    left: 2px;
+    right: auto;
+    background-color: #00C8F8;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #005DFF;
+}
+
+.delete-btn {
+    right: 2px;
+    left: auto;
+    background-color: #FF4B4B;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #FF0000;
+}
+
+.game-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.game-date-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.game-location {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.game-arbitro {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.postulados-btn {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.postulados-btn:hover {
+    background-color: #bbb;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #45A049;
+}
+
+.cancel-btn {
+    background-color: #FF4B4B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #FF0000;
+}
+
+.footer {
+    background-color: #005DFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer .contact-info {
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.mini-assign-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left:18px;
+    transition: background 0.2s;
+}
+.mini-assign-btn:hover {
+    background-color: #388e3c;
+}
