@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:5000' // <-- Cambia aquí al puerto del backend
+      '/api': 'https://proyecto-especialidad.onrender.com' // <-- Cambia aquí al puerto del backend
     }
   }
 })
