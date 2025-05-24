@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configuración de CORS (¡IMPORTANTE! Cambia el origin al puerto de tu frontend)
 app.use(cors({
-    origin: 'http://localhost:5173', // URL del frontend (Vite)
+    origin: 'refzone.netlify.app', // URL del frontend (Vite)
     credentials: true,               // Permitir envío de cookies
 }));
 
